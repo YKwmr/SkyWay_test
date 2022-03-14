@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SDNをインポート-->
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.0.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="style.css"> -->
+    <title>SkyWayチュートリアル</title>
+  </head>
+  
+  <body>
+    <h1>
+      SkyWay1to1
+    </h1>
+    <div class="container">
+      <div class="main">
+        <!--カメラ映像を表示する領域を作成-->
+        <video id="my-video" width="400px" autoplay muted playsinline></video>
+        <!--peerオブジェクトのopenイベント(SkyWayのシグナリングサーバとの接続が成功したタイミング)で取得したPeerIDをpに挿入-->
+        <p id="my-id"></p>
+      </div>
+          <!--相手のPeerIDを入力して発信-->
+      <textarea id="their-id"></textarea>
+      <button id="make-call">発信</button>
+      <div class="side">
+        <!--着信があった際に相手のカメラ映像を表示する領域の作成-->
+        <video id="their-video" width="400px" autoplay playsinline></video>
+        <p id="their-id"></p>
+      </div>
+    </div>
+    
+    <!--js部分は別ファイルに-->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
